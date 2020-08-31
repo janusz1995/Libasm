@@ -1,28 +1,28 @@
 
 .PHONY: all re fclean clean
 
-	NAME = libasm.a
+NAME = libasm.a
 
-	SRC = 
+SRC = ft_strlen.s
 
-	SRCO = $(SRC:.c=.s)
+SRCO = $(SRC:.s=.o)
 
-	HEADER = cub3d.h
+HEADER = libasm.h
 
-	FLAGS = -Wall -Werror -Wextra -g
+FLAGS = -fmacho64
 
-	all: $(NAME)
+all: $(NAME)
 
-	$(NAME): $(SRCO)
+$(NAME): $(SRCO)
+	ar rcs $(NAME) $(SRCO)
 
+%.o:%.s $(HEADER)
+	nasm $(FLAGS) $<
 
-	%.o:%.s $(HEADER)
-		$(CC) $(FLAGS) -I ./mlx.h -c $< -o $@
+clean:
+	rm -f $(SRCO)
 
-	clean:
-		rm -f $(SRCO)
+fclean: clean
+	rm -f $(NAME)
 
-	fclean: clean
-		rm -f $(NAME)
-
-	re: fclean all
+re: fclean all

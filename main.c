@@ -6,8 +6,19 @@
 /*   By: drina <drina@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 20:13:54 by drina             #+#    #+#             */
-/*   Updated: 2020/08/30 20:34:10 by drina            ###   ########.fr       */
+/*   Updated: 2020/08/31 13:12:55 by drina            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include		
+#include "libasm.h"
+#include <stdio.h>
+
+int	main()
+{
+	char *str = "Hello World!";
+	int i;
+	i = ft_strlen(str);
+
+	printf("%d", i);
+	return (0);
+}

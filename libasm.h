@@ -6,14 +6,15 @@
 /*   By: drina <drina@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 20:14:33 by drina             #+#    #+#             */
-/*   Updated: 2020/08/30 20:35:53 by drina            ###   ########.fr       */
+/*   Updated: 2020/08/31 13:09:56 by drina            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBASM_H
 # define LIBASM_H
+# include <stdlib.h>
 
-size_t		ft_strlen(char  *str);
+size_t		ft_strlen(char *str);
 
 
 #endif
